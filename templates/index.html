@@ -10,16 +10,19 @@
       background-color:powderblue
     }
     .fm {
-  background-color: ;
+  background-color: rgba(255, 0, 0, 0.1);
   color: green;
-  border: 2px solid black;
+  border: 2px inset brown;
   margin: 1px;
   padding: 7px 30px;
+  border-radius: 6px;
 }
    h1   {color: blue;
-         border: 2px solid black
-           padding: 25px 50px 75px;
-           background-color: lightblue;}
+         border: 1px double yellow;
+           padding: 25px 0px ;
+           background-color: tomato;
+           border-radius: 15px;
+           text-shadow: 2px 2px 5px red;}
 
   </style>
 
@@ -35,14 +38,220 @@
         <h1 >Enter the Information of House </h1>
         <br><br>
          <p >
-        <input class="fm" align="center" type="number" name="total_sqft_int" placeholder="Total Squre Foot"  step="1"/><br>
+        <input class="fm" align="left" type="number" name="total_sqft_int" placeholder="Total Squre Foot"  step="1"/><br>
     	<input class="fm" align="center" type="number" name="Bathrooms" placeholder="Bathrooms"  step="1"/><br>
         <input class="fm" align="center" type="number" name="balcony" placeholder="Balcony"  step="1"/><br>
         <input class="fm" align="center" type="number" name="bhk" placeholder="BHK"  step="1"/><br>
         <input class="fm" align="center" type="number" name="price_per_sqft" placeholder="Price Per Squre Foot"  step="1"/><br>
-        <input class="fm" type="text" name="area_type" placeholder="Area Type" /><br>
-        <input class="fm" type="text" name="availability" placeholder="House Availability" /><br>
-        <input class="fm" type="text" name="location" placeholder="House Location" />
+        <!--<input class="fm" type="text" name="area_type" placeholder="Area Type" /><br><br> -->
+            <!-- <label for="browser" class="fm" >Choose your browser from the list:</label><br><br>-->
+             <input  class="fm" list="Area"  placeholder="Area Type" name="Area" id="Area "><br>
+             <datalist id="Area">
+             <option value="Super built-up  Area">
+             <option value="Built-up  Area">
+                 <option value="Plot  Area">
+             </datalist>
+       <!-- <input class="fm" type="text" name="availability" placeholder="HouseAvailability" /><br>-->
+             <input  class="fm" list="availability"  placeholder="House Availability" name="availability" id="availability "><br>
+             <datalist id="availability">
+             <option value="Ready To Move">
+             <option value="Not now">
+
+             </datalist>
+        <!--<input class="fm" type="text" name="location" placeholder="House Location" />-->
+             <input  class="fm" list="Location"  placeholder="House Location" name="Location" id="Location "><br>
+             <datalist id="Location">
+             <option value="Whitefield">
+<option value="Sarjapur  Road">
+
+
+<option value="Electronic City">
+
+<option value="Marathahalli">
+
+<option value="Raja Rajeshwari Nagar">
+
+<option value="Haralur Road">
+
+<option value="Hennur Road">
+
+<option value="Bannerghatta Road">
+
+<option value="Uttarahalli">
+
+<option value="Thanisandra">
+
+<option value="Electronic City Phase II">
+
+<option value="Hebbal7th Phase JP Nagar">
+
+<option value="Yelahanka">
+
+<option value="Kanakpura Road">
+
+<option value="KR Puram	">
+
+<option value="Sarjapur	">
+
+<option value="Rajaji Nagar">
+
+<option value="Kasavanhalli">
+
+<option value="Bellandur">
+
+<option value="Begur Road">
+
+<option value="Banashankari">
+
+<option value="Kothanur">
+
+<option value="Hormavu	">
+
+<option value="Harlur">
+
+<option value="Akshaya Nagar">
+
+<option value="Jakkur">
+
+<option value="Electronics City Phase 1">
+
+<option value="Varthur">
+
+<option value="Chandapura">
+
+<option value="HSR Layout">
+
+<option value="Hennur">
+
+<option value="Ramamurthy Nagar">
+
+<option value="Ramagondanahalli">
+
+<option value="Kaggadasapura">
+
+<option value="Kundalahalli">
+
+<option value="Koramangala">
+
+<option value="Hulimavu">
+
+<option value="Budigere">
+
+<option value="Hoodi">
+
+<option value="Malleshwaram">
+
+<option value="Hegde Nagar">
+
+<option value="8th Phase JP Nagar">
+
+<option value="Gottigere">
+
+<option value="JP Nagar">
+
+<option value="Yeshwanthpur">
+
+<option value="Channasandra">
+
+<option value="Bisuvanahalli">
+
+<option value="Vittasandra">
+
+<option value="Indira Nagar">
+
+<option value="Vijayanagar">
+
+<option value="Kengeri	">
+
+<option value="Brookefield">
+
+<option value="Sahakara Nagar">
+
+<option value="Hosa Road">
+
+<option value="Old Airport Road">
+
+<option value="Bommasandra">
+
+<option value="Balagere">
+
+<option value="Green Glen Layout">
+
+<option value="Old Madras Road">
+
+<option value="Rachenahalli">
+
+<option value="Panathur">
+
+<option value="Kudlu Gate">
+
+<option value="Thigalarapalya	">
+
+<option value="Ambedkar Nagar">
+
+<option value="Jigani">
+
+<option value="Yelahanka New Town">
+
+<option value="Talaghattapura">
+
+<option value="Mysore Road">
+
+<option value="Kadugodi">
+
+<option value="Frazer Town">
+
+<option value="Dodda Nekkundi	">
+
+<option value="Devanahalli">
+
+<option value="Kanakapura">
+
+<option value="Attibele">
+
+<option value="Anekal">
+
+<option value="Lakshminarayana Pura">
+
+<option value="Nagarbhavi">
+
+<option value="Ananth Nagar">
+
+<option value="5th Phase JP Nagar">
+
+<option value="TC Palaya">
+
+<option value="CV Raman Nagar">
+
+<option value="Kengeri Satellite Town">
+
+<option value="Kudlu	Jalahalli">
+
+<option value="Subramanyapura">
+
+<option value="Bhoganhalli">
+
+<option value="Doddathoguru">
+
+<option value="Kalena Agrahara">
+
+<option value="Horamavu Agara">
+
+<option value="Vidyaranyapura">
+
+<option value="BTM 2nd Stage">
+
+<option value="Hebbal Kempapura">
+
+<option value="Hosur Road">
+
+<option value="Horamavu Banaswadi">
+
+<option value="Domlur Mahadevpura">
+
+<option value="Tumkur Road">
+
+             </datalist>
         </p>
     	<br>
 
