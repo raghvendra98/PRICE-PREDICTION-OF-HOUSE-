@@ -16,6 +16,7 @@
   margin: 1px;
   padding: 7px 30px;
   border-radius: 6px;
+  align="center";
 }
    h1   {color: blue;
          border: 1px double yellow;
@@ -33,244 +34,314 @@
  <div >
 
     <center>
-    <form  method="post">
+    <form action='/predict' method="POST" >
 
         <h1 >Enter the Information of House </h1>
         <br><br>
-         <p >
-        <input class="fm" align="left" type="number" name="total_sqft_int" placeholder="Total Squre Foot"  step="1"/><br>
-    	<input class="fm" align="center" type="number" name="Bathrooms" placeholder="Bathrooms"  step="1"/><br>
-        <input class="fm" align="center" type="number" name="balcony" placeholder="Balcony"  step="1"/><br>
-        <input class="fm" align="center" type="number" name="bhk" placeholder="BHK"  step="1"/><br>
-        <input class="fm" align="center" type="number" name="price_per_sqft" placeholder="Price Per Squre Foot"  step="1"/><br>
-        <!--<input class="fm" type="text" name="area_type" placeholder="Area Type" /><br><br> -->
-            <!-- <label for="browser" class="fm" >Choose your browser from the list:</label><br><br>-->
-             <input  class="fm" list="Area"  placeholder="Area Type" name="Area" id="Area "><br>
-             <datalist id="Area">
-             <option value="Super built-up  Area">
-             <option value="Built-up  Area">
-                 <option value="Plot  Area">
-             </datalist>
-       <!-- <input class="fm" type="text" name="availability" placeholder="HouseAvailability" /><br>-->
-             <input  class="fm" list="availability"  placeholder="House Availability" name="availability" id="availability "><br>
-             <datalist id="availability">
-             <option value="Ready To Move">
-             <option value="Not now">
 
-             </datalist>
-        <!--<input class="fm" type="text" name="location" placeholder="House Location" />-->
-             <input  class="fm" list="Location"  placeholder="House Location" name="Location" id="Location "><br>
-             <datalist id="Location">
-             <option value="Whitefield">
-<option value="Sarjapur  Road">
 
 
-<option value="Electronic City">
 
-<option value="Marathahalli">
 
-<option value="Raja Rajeshwari Nagar">
+        <div class="fm">
+            <label><b>MSSubClass</b></label>
+            <br>
+          <input placeholder="Bathrooms" min="10" max="500"   name="MSSubClass" type="number"  class="validate">
+        </div>
 
-<option value="Haralur Road">
+        <div class="fm">
+            <label><b>MSZoning</b></label>
+            <br>
+          <input placeholder="MSZoning" width="48" height="10"  name="MSZoning" type="number"  class="validate">
+        </div>
 
-<option value="Hennur Road">
+        <div class="fm">
+            <label><b>LotArea</b></label>
+            <br>
+          <input placeholder="LotFrontage" width="48" height="10" step=".01" name="LotFrontage" type="number"  class="validate">
+        </div>
 
-<option value="Bannerghatta Road">
 
-<option value="Uttarahalli">
+        <div class="fm">
+            <label><b>LotShape</b></label>
+            <br>
+          <input placeholder="LotShape" width="48" height="10" name="LotShape" type="number"  class="validate">
+        </div>
 
-<option value="Thanisandra">
 
-<option value="Electronic City Phase II">
 
-<option value="Hebbal7th Phase JP Nagar">
+        <div class="fm">
+            <label><b>OverallQual</b></label>
+            <br>
+          <input placeholder="OverallQual" width="48" height="10" name="OverallQual" type="number"  class="validate">
+        </div>
 
-<option value="Yelahanka">
 
-<option value="Kanakpura Road">
+        <div class="fm">
+            <label><b>OverallCond</b></label>
+            <br>
+          <input placeholder="OverallCond" width="48" height="10" name="OverallCond" type="number"  class="validate">
+        </div>
 
-<option value="KR Puram	">
+        <div class="fm">
+            <label><b>YearBuilt</b></label>
+            <br>
+          <input placeholder="YearBuilt" width="48" height="10" name="YearBuilt" type="number"  class="validate">
+        </div>
 
-<option value="Sarjapur	">
+        <div class="fm">
+            <label><b>YearRemodAdd	</b></label>
+            <br>
+          <input placeholder="YearRemodAdd	" width="48" height="10" name="YearRemodAdd	" type="number"  class="validate">
+        </div>
 
-<option value="Rajaji Nagar">
 
-<option value="Kasavanhalli">
 
-<option value="Bellandur">
 
-<option value="Begur Road">
 
-<option value="Banashankari">
 
-<option value="Kothanur">
 
-<option value="Hormavu	">
+                <div class="fm">
+            <label><b>Exterior1st</b></label>
+            <br>
+          <input placeholder="Exterior1st" width="48" height="10" name="Exterior1st" type="number"  class="validate">
+        </div>
+        <div class="fm">
+            <label><b>MasVnrArea</b></label>
+            <br>
+          <input placeholder="MasVnrArea" step=".01" width="48" height="10" name="MasVnrArea" type="number"  class="validate">
+        </div>
 
-<option value="Harlur">
+        <div class="fm">
+            <label><b>BsmtQual</b></label>
+            <br>
+          <input placeholder="BsmtQual" width="48" height="10" name="BsmtQual" type="number"  class="validate">
+        </div>
 
-<option value="Akshaya Nagar">
 
-<option value="Jakkur">
+        <div class="fm">
+            <label><b>BsmtCond</b></label>
+            <br>
+          <input placeholder="BsmtCond" width="48" height="10" name="BsmtCond" type="number"  class="validate">
+        </div>
 
-<option value="Electronics City Phase 1">
 
-<option value="Varthur">
 
-<option value="Chandapura">
+        <div class="fm">
+            <label><b>BsmtExposure</b></label>
+            <br>
+          <input placeholder="BsmtExposure" width="48" height="10" name="BsmtExposure" type="number"  class="validate">
+        </div>
 
-<option value="HSR Layout">
 
-<option value="Hennur">
+        <div class="fm">
+            <label><b>BsmtFinType1</b></label>
+            <br>
+          <input placeholder="BsmtFinType1" width="48" height="10" name="BsmtFinType1" type="number"  class="validate">
+        </div>
 
-<option value="Ramamurthy Nagar">
+        <div class="fm">
+            <label><b>BsmtFinSF1</b></label>
+            <br>
+          <input placeholder="BsmtFinSF1" width="48" height="10" name="BsmtFinSF1" type="number"  class="validate">
+        </div>
 
-<option value="Ramagondanahalli">
+        <div class="fm">
+            <label><b>BsmtFinType2</b></label>
+            <br>
+          <input placeholder="BsmtFinType2"  min="100" max="500" width="48" height="10" name="BsmtFinType2" type="number"  class="validate">
+        </div>
 
-<option value="Kaggadasapura">
 
-<option value="Kundalahalli">
 
-<option value="Koramangala">
 
-<option value="Hulimavu">
 
-<option value="Budigere">
 
-<option value="Hoodi">
 
-<option value="Malleshwaram">
+                <div class="fm">
+            <label><b>BsmtFinSF2</b></label>
+            <br>
+          <input placeholder="BsmtFinSF2" min="100" max="10000" width="48" height="10" name="BsmtFinSF2" type="number"  class="validate">
+        </div>
+        <div class="fm">
+            <label><b>BsmtUnfSF</b></label>
+            <br>
+          <input placeholder="BsmtUnfSF" min="100" max="10000" width="48" height="10" name="BsmtUnfSF" type="number"  class="validate">
+        </div>
 
-<option value="Hegde Nagar">
+        <div class="fm">
+            <label><b>TotalBsmtSF</b></label>
+            <br>
+          <input placeholder="TotalBsmtSF" min="100" max="10000" width="48" height="10" step=".01" name="TotalBsmtSF" type="number"  class="validate">
+        </div>
 
-<option value="8th Phase JP Nagar">
 
-<option value="Gottigere">
+        <div class="fm">
+            <label><b>HeatingQC</b></label>
+            <br>
+          <input placeholder="HeatingQC" width="48" height="10" name="HeatingQC" type="number"  class="validate">
+        </div>
 
-<option value="JP Nagar">
 
-<option value="Yeshwanthpur">
 
-<option value="Channasandra">
+        <div class="fm">
+            <label><b>1stFlrSF</b></label>
+            <br>
+          <input placeholder="1stFlrSF" step=".01" width="48" height="10" name="1stFlrSF" type="number"  class="validate">
+        </div>
 
-<option value="Bisuvanahalli">
 
-<option value="Vittasandra">
+        <div class="fm">
+            <label><b>2ndFlrSF</b></label>
+            <br>
+          <input placeholder="2ndFlrSF" min="100" max="10000" width="48" height="10" name="2ndFlrSF" type="number"  class="validate">
+        </div>
 
-<option value="Indira Nagar">
+        <div class="fm">
+            <label><b>LowQualFinSF</b></label>
+            <br>
+          <input placeholder="LowQualFinSF" min="100" max="1000" width="48" height="10" name="LowQualFinSF" type="number"  class="validate">
+        </div>
 
-<option value="Vijayanagar">
+        <div class="fm">
+            <label><b>BsmtFullBath</b></label>
+            <br>
+          <input placeholder="BsmtFullBath" min="0" max="5" width="48" height="10" name="BsmtFullBath" type="number"  class="validate">
+        </div>
 
-<option value="Kengeri	">
 
-<option value="Brookefield">
 
-<option value="Sahakara Nagar">
 
-<option value="Hosa Road">
 
-<option value="Old Airport Road">
 
-<option value="Bommasandra">
 
-<option value="Balagere">
 
-<option value="Green Glen Layout">
 
-<option value="Old Madras Road">
+                <div class="fm">
+            <label><b>KitchenQual</b></label>
+            <br>
+          <input placeholder="KitchenQual" min="1" max="10" width="48" height="10" name="KitchenQual" type="number"  class="validate">
+        </div>
+        <div class="fm">
+            <label><b>TotRmsAbvGrd</b></label>
+            <br>
+          <input placeholder="TotRmsAbvGrd" min="1" max="10" width="48" height="10" name="TotRmsAbvGrd" type="number"  class="validate">
+        </div>
 
-<option value="Rachenahalli">
+        <div class="fm">
+            <label><b>Fireplaces</b></label>
+            <br>
+          <input placeholder="Fireplaces" min="1" max="10" width="48" height="10" name="Fireplaces" type="number"  class="validate">
+        </div>
 
-<option value="Panathur">
 
-<option value="Kudlu Gate">
+        <div class="fm">
+            <label><b>FireplaceQu</b></label>
+            <br>
+          <input placeholder="FireplaceQu" min="1" max="10" width="48" height="10" name="FireplaceQu" type="number"  class="validate">
+        </div>
 
-<option value="Thigalarapalya	">
 
-<option value="Ambedkar Nagar">
 
-<option value="Jigani">
+        <div class="fm">
+            <label><b>GarageType</b></label>
+            <br>
+          <input placeholder="GarageType" width="48" min="1" max="10" height="10" name="GarageType" type="number"  class="validate">
+        </div>
 
-<option value="Yelahanka New Town">
 
-<option value="Talaghattapura">
+        <div class="fm">
+            <label><b>GarageYrBlt</b></label>
+            <br>
+          <input placeholder="GarageYrBlt" step=".01" width="48" height="10" name="GarageYrBlt" type="number"  class="validate">
+        </div>
 
-<option value="Mysore Road">
+        <div class="fm">
+            <label><b>GarageFinish</b></label>
+            <br>
+          <input placeholder="GarageFinish" min="1" max="10" width="48" height="10" name="GarageFinish" type="number"  class="validate">
+        </div>
 
-<option value="Kadugodi">
+        <div class="fm">
+            <label><b>GarageCars</b></label>
+            <br>
+          <input placeholder="GarageCars"  min="1" max="10" width="48" height="10" name="GarageCars" type="number"  class="validate">
+        </div>
 
-<option value="Frazer Town">
 
-<option value="Dodda Nekkundi	">
 
-<option value="Devanahalli">
 
-<option value="Kanakapura">
 
-<option value="Attibele">
 
-<option value="Anekal">
 
-<option value="Lakshminarayana Pura">
 
-<option value="Nagarbhavi">
 
-<option value="Ananth Nagar">
+                <div class="fm">
+            <label><b>GarageArea</b></label>
+            <br>
+          <input placeholder="GarageArea" min="100" max="1000" width="48" height="10" name="GarageArea" type="number"  class="validate">
+        </div>
+        <div class="fm">
+            <label><b>WoodDeckSF</b></label>
+            <br>
+          <input placeholder="WoodDeckSF" min="100" max="1000" width="48" height="10" name="WoodDeckSF" type="number"  class="validate">
+        </div>
 
-<option value="5th Phase JP Nagar">
+        <div class="fm">
+            <label><b>OpenPorchSF</b></label>
+            <br>
+          <input placeholder="OpenPorchSF" min="100" max="1000" width="48" height="10" name="OpenPorchSF" type="number"  class="validate">
+        </div>
 
-<option value="TC Palaya">
 
-<option value="CV Raman Nagar">
+        <div class="fm">
+            <label><b>EnclosedPorch</b></label>
+            <br>
+          <input placeholder="EnclosedPorch" min="100" max="1000" width="48" height="10" name="EnclosedPorch" type="number"  class="validate">
+        </div>
 
-<option value="Kengeri Satellite Town">
 
-<option value="Kudlu	Jalahalli">
 
-<option value="Subramanyapura">
+        <div class="fm">
+            <label><b>3SsnPorch</b></label>
+            <br>
+          <input placeholder="3SsnPorch" width="48" height="10" name="3SsnPorch" type="number"  class="validate">
+        </div>
 
-<option value="Bhoganhalli">
 
-<option value="Doddathoguru">
+        <div class="fm">
+            <label><b>ScreenPorch</b></label>
+            <br>
+          <input placeholder="ScreenPorch" width="48" height="10" name="ScreenPorch" type="number"  class="validate">
+        </div>
 
-<option value="Kalena Agrahara">
+        <div class="fm">
+            <label><b>PoolArea</b></label>
+            <br>
+          <input placeholder="PoolArea" width="48" height="10" name="PoolArea" type="number"  class="validate">
+        </div>
 
-<option value="Horamavu Agara">
+        <div class="fm">
+            <label><b>MoSold</b></label>
+            <br>
+          <input placeholder="MoSold" width="48" height="10" name="MoSold" type="number"  class="validate">
+        </div><br><br>
 
-<option value="Vidyaranyapura">
 
-<option value="BTM 2nd Stage">
 
-<option value="Hebbal Kempapura">
 
-<option value="Hosur Road">
 
-<option value="Horamavu Banaswadi">
 
-<option value="Domlur Mahadevpura">
 
-<option value="Tumkur Road">
+           <button type="submit" class="fm">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+<div >
+      <h1 > {{ predict_price }} </h1>
 
-             </datalist>
-        </p>
-    	<br>
+</div>
 
-        <br>
-
-
-        <div ></div>
-            <a><button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predicted House Price</strong></button></a>
- </div>
-
-     </form>
-
-     </center>
-
-   <div>
-
-   </div>
-
- </div>
 
 </body>
 </html>
